@@ -1,0 +1,19 @@
+{
+  "name": "browser-websocket",
+  "version": "0.0.1",
+  "description": "package websocket functions of browser",
+  "main": "libs/BrowserWebSocket.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:benjaminchen/browser-websocket.git"
+  },
+  "keywords": [
+    "websocket",
+    "browser"
+  ],
+  "author": "Benjamin Chen",
+  "license": "MIT"
+}
