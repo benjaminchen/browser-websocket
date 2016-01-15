@@ -1,5 +1,11 @@
 # Change Log
 
+## [v0.0.4](https://github.com/benjaminchen/browser-websocket/tree/v0.0.3) (2016-1-15)
+
+**Fixed bugs:**
+
+- fix event binding of debug message
+
 ## [v0.0.3](https://github.com/benjaminchen/browser-websocket/tree/v0.0.3) (2015-12-9)
 
 **Fixed bugs:**

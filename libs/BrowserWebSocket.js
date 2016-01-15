@@ -5,43 +5,43 @@ function BrowserWebSocket(url, debug) {
     this.url = url;
     this.ws = new WebSocket(url);
     this.debugMode = debug;
+    if (debug) {
+        this.onopen(function() {
+            console.log('connect successful: %s ...', this.url);
+        });
+        this.onclose(function() {
+            console.log('connection interrupted ...');
+        });
+        this.onerror(function() {
+            console.log('something error ...');
+        });
+        this.onmessage(function(message) {
+            console.log('received message: <-- %s ...', message);
+        });
+    }
 }
 
 BrowserWebSocket.prototype = {
     onopen: function(callback) {
-        var me = this;
-        me.ws.addEventListener('open', function() {
-            if (me.debugMode) console.log("connect [" + me.url + "] successful ...");
-            if (callback) callback();
-        });
+        if (callback) this.ws.addEventListener('open', callback);
     },
     onclose: function(callback) {
-        var me = this;
-        me.ws.addEventListener('close', function() {
-            if (me.debugMode) console.log("connection already interrupted ...");
-            if (callback) callback();
-        });
+        if (callback) this.ws.addEventListener('close', callback);
     },
     onerror: function(callback) {
-        var me = this;
-        me.ws.addEventListener('error', function(e) {
-            if (me.debugMode) console.log("something error ...");
-            if (callback) callback(e.data);
-        });
+        if (callback) this.ws.addEventListener('error', callback);
     },
     onmessage: function(callback) {
-        var me = this;
-        me.ws.addEventListener('message', function(e) {
-            if (me.debugMode) console.log("received message [" + e.data + "] form server ...");
-            if (callback) callback(e.data);
+        if (callback) this.ws.addEventListener('message', function(e){
+            callback(e.data);
         });
     },
     emit: function(message) {
-        if (this.debugMode) console.log("send message [" + message + "] to server ...");
+        if (this.debugMode) console.log('send message: --> %s ...', message);
         this.ws.send(message);
     },
     close: function() {
-        if (this.debugMode) console.log("close connection ...");
+        if (this.debugMode) console.log('close connection ...');
         this.ws.close();
     },
     off: function(event, fn) {
