@@ -1,6 +1,12 @@
 # Change Log
 
-## [v0.0.4](https://github.com/benjaminchen/browser-websocket/tree/v0.0.3) (2016-1-15)
+## [v0.0.5](https://github.com/benjaminchen/browser-websocket/tree/v0.0.5) (2016-1-20)
+
+**Implemented enhancements:**
+
+- add setReconnect function
+
+## [v0.0.4](https://github.com/benjaminchen/browser-websocket/tree/v0.0.4) (2016-1-15)
 
 **Fixed bugs:**
 

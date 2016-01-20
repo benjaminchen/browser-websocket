@@ -81,3 +81,11 @@ var openFunc = function() {
 ws.onopen(openFunc);
 ws.off('open', openFunc);
 ```
+
+## BrowserWebSocket.reconnect(reconnectInterval, reconnectTimes)
+
+Reconnect server when connection is closed.
+
+```js
+ws.setReconnect(reconnectInterval, reconnectTimes);
+```
