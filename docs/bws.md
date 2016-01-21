@@ -14,44 +14,29 @@ var ws = new BrowserWebSocket('ws://localhost:8000', true); // the second parame
 
 Store the url of connection server.
 
-## BrowserWebSocket.onopen(callback)
+## BrowserWebSocket.on(event, callback)
 
-An event listener to be called when the websocket is connected.
+Bind event listener to the websocket.
 
 ```js
-ws.onopen(function() {
-    console.log('server is already connected');
+// accept events: open, close, error, message
+ws.on(event, function(e) {
+	// message event has data
+	// you can get message from e.data
+	console.log('event listener was bound');
 })
 ```
 
-## BrowserWebSocket.onclose(callback)
+## BrowserWebSocket.off(event, fn)
 
-An event listener to be called when the websocket is closed.
-
-```js
-ws.onclose(function() {
-    console.log('server connection closed');
-})
-```
-
-## BrowserWebSocket.onerror(callback)
-
-An event listener to be called when an error occurs.
+Remove a previously-attached event handler from the event listener.
 
 ```js
-ws.onerror(function(data) {
-    console.log(data);
-});
-```
-
-## BrowserWebSocket.onmessage(callback)
-
-An event listener to be called when received message from server.
-
-```js
-ws.onmessage(function(message) {
-    console.log('received message[' + message + '] from server');
-});
+var openFunc = function() {
+    console.log('already connected');
+};
+ws.on('open', openFunc);
+ws.off('open', openFunc);
 ```
 
 ## BrowserWebSocket.emit(message)
@@ -70,22 +55,11 @@ Closes the WebSocket connection.  If the connection is already CLOSED, this meth
 ws.close();
 ```
 
-## BrowserWebSocket.off(event, fn)
 
-Remove a previously-attached event handler from the event listener.
-
-```js
-var openFunc = function() {
-    console.log('already connected');
-};
-ws.onopen(openFunc);
-ws.off('open', openFunc);
-```
-
-## BrowserWebSocket.reconnect(reconnectInterval, reconnectTimes)
+## BrowserWebSocket.reconnect()
 
 Reconnect server when connection is closed.
 
 ```js
-ws.setReconnect(reconnectInterval, reconnectTimes);
+ws.reconnect();
 ```

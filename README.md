@@ -10,11 +10,12 @@ This is packaging functions of browser websocket.
 var BrowserWebSocket = require('browser-websocket');
 var ws = new BrowserWebSocket('ws://localhost:8000');
 
-ws.onopen(function() {
+ws.on('open', function() {
     ws.emit('hello world');
 });
 
-ws.onmessage(function(message) {
+ws.on('message', function(e) {
+	var message = e.data;
     console.log(message);
 });
 ```
@@ -25,12 +26,13 @@ ws.onmessage(function(message) {
 <script src="browserWebsocket.min.js" id="CustomObjectName"></script>
 <script>
     var ws = new CustomObjectName('ws://localhost:8000');
-    
-    ws.onopen(function() {
+
+    ws.on('open', function() {
         ws.emit('hello world');
     });
-    
-    ws.onmessage(function(message) {
+
+    ws.on('message', function(e) {
+	    var message = e.data;
         console.log(message);
     });
 </script>
