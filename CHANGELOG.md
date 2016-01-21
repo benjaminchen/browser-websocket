@@ -1,5 +1,11 @@
 # Change Log
 
+## [v0.0.7](https://github.com/benjaminchen/browser-websocket/tree/v0.0.7) (2016-1-21)
+
+**Fixed bugs:**
+
+- renew mini js
+
 ## [v0.0.6](https://github.com/benjaminchen/browser-websocket/tree/v0.0.6) (2016-1-21)
 
 **Implemented enhancements:**
