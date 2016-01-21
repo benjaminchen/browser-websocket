@@ -1,5 +1,11 @@
 # Change Log
 
+## [v0.0.8](https://github.com/benjaminchen/browser-websocket/tree/v0.0.8) (2016-1-21)
+
+**Fixed bugs:**
+
+- change url parameter
+
 ## [v0.0.7](https://github.com/benjaminchen/browser-websocket/tree/v0.0.7) (2016-1-21)
 
 **Fixed bugs:**
