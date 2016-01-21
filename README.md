@@ -15,7 +15,7 @@ ws.on('open', function() {
 });
 
 ws.on('message', function(e) {
-	var message = e.data;
+    var message = e.data;
     console.log(message);
 });
 ```
@@ -32,7 +32,7 @@ ws.on('message', function(e) {
     });
 
     ws.on('message', function(e) {
-	    var message = e.data;
+        var message = e.data;
         console.log(message);
     });
 </script>

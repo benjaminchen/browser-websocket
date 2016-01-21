@@ -52,7 +52,7 @@ BrowserWebSocket.prototype = {
     reconnect: function() {
         if (this.debugging) console.log('try to reconnect ...');
         var events = this.events;
-        var ws = new WebSocket('ws://rde-tech.vir888.com:81/chatroom/ws/debug-app-key?token=ghost');
+        var ws = new WebSocket(this.url);
         var me = this;
         for (var event in events) {
             if (! events.hasOwnProperty(event)) continue;
