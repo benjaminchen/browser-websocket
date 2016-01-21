@@ -1,5 +1,14 @@
 # Change Log
 
+## [v0.0.6](https://github.com/benjaminchen/browser-websocket/tree/v0.0.6) (2016-1-21)
+
+**Implemented enhancements:**
+
+- delete [onopen, onclose, onmessage, onerror] function
+- add [on(event, fn)] function
+- delete setReconnect function
+- add reconnect function
+
 ## [v0.0.5](https://github.com/benjaminchen/browser-websocket/tree/v0.0.5) (2016-1-20)
 
 **Implemented enhancements:**
