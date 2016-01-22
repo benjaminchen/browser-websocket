@@ -36,7 +36,7 @@ BrowserWebSocket.prototype = {
     },
     off: function(event, fn) {
         var index = this.events[event].indexOf(fn);
-        if (! index > -1) return;
+        if (index < 0) return;
         this.ws.removeEventListener(event, fn);
         this.events[event].splice(index, 1);
     },

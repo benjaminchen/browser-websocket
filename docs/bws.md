@@ -14,7 +14,7 @@ var ws = new BrowserWebSocket('ws://localhost:8000', true); // the second parame
 
 Store the url of connection server.
 
-## BrowserWebSocket.on(event, callback)
+## BrowserWebSocket.on(event, fn)
 
 Bind event listener to the websocket.
 
@@ -55,11 +55,12 @@ Closes the WebSocket connection.  If the connection is already CLOSED, this meth
 ws.close();
 ```
 
-
 ## BrowserWebSocket.reconnect()
 
 Reconnect server when connection is closed.
 
 ```js
-ws.reconnect();
+ws.on('close', function() {
+    ws.reconnect();
+})
 ```
