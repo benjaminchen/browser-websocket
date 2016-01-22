@@ -1,5 +1,11 @@
 # Change Log
 
+## [v0.0.9](https://github.com/benjaminchen/browser-websocket/tree/v0.0.9) (2016-1-22)
+
+**Fixed bugs:**
+
+- fix error of if condition
+
 ## [v0.0.8](https://github.com/benjaminchen/browser-websocket/tree/v0.0.8) (2016-1-21)
 
 **Fixed bugs:**
