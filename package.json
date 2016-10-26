@@ -1,6 +1,6 @@
 {
   "name": "browser-websocket",
-  "version": "0.0.9",
+  "version": "1.0.0",
   "description": "package websocket functions of browser",
   "main": "libs/BrowserWebSocket.js",
   "scripts": {

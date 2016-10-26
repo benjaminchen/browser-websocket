@@ -1,5 +1,12 @@
 # Change Log
 
+## [v1.0.0](https://github.com/benjaminchen/browser-websocket/tree/v1.0.0) (2016-10-26)
+
+**Fixed bugs:**
+
+- fix version number error
+- add .gitignore
+
 ## [v0.0.9](https://github.com/benjaminchen/browser-websocket/tree/v0.0.9) (2016-1-22)
 
 **Fixed bugs:**
