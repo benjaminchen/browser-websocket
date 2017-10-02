@@ -23,9 +23,9 @@ ws.on('message', function(e) {
 - html
 
 ```js
-<script src="browserWebsocket.min.js" id="CustomObjectName"></script>
+<script src="browser-websocket.min.js"></script>
 <script>
-    var ws = new CustomObjectName('ws://localhost:8000');
+    var ws = new BrowserWebSocket('ws://localhost:8000');
 
     ws.on('open', function() {
         ws.emit('hello world');
@@ -48,10 +48,10 @@ npm install browser-websocket --save
 
 - use in html page
 
-download "browserWebsocket.min.js" (in [release](https://github.com/benjaminchen/browser-websocket/tree/master/release) folder)
+download "browser-websocket.min.js" (in [dist](https://github.com/benjaminchen/browser-websocket/tree/master/dist) folder)
 
 ```html
-<script src="browserWebsocket.min.js" id="customObjectName"></script>
+<script src="browser-websocket.min.js"></script>
 ```
 
 ## API Docs

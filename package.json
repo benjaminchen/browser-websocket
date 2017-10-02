@@ -1,8 +1,8 @@
 {
   "name": "browser-websocket",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "package websocket functions of browser",
-  "main": "libs/BrowserWebSocket.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,10 @@
     "browser"
   ],
   "author": "Benjamin Chen",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.17",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.6.0"
+  }
 }

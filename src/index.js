@@ -64,6 +64,6 @@ BrowserWebSocket.prototype = {
             me.ws = ws;
         });
     }
-};
+}
 
-module.exports = BrowserWebSocket;
+module.exports = BrowserWebSocket

@@ -1,5 +1,12 @@
 # Change Log
 
+## [v2.0.0](https://github.com/benjaminchen/browser-websocket/tree/v2.0.0) (2017-10-02)
+
+**Implemented enhancements:**
+
+- change release folder to dist foler
+- provide minify file and unminify file
+
 ## [v1.0.0](https://github.com/benjaminchen/browser-websocket/tree/v1.0.0) (2016-10-26)
 
 **Fixed bugs:**
