@@ -82,17 +82,17 @@ function BrowserWebSocket(url, debug) {
     };
     if (debug) {
         this.on('open', function() {
-            console.log('connect successful: %s ...', this.url);
+            console.log('%s(%d)\nconnect successful: %s ...', Date(), Date.now(), this.url);
         });
         this.on('close', function() {
-            console.log('connection interrupted ...');
+            console.log('%s(%d)\nconnection interrupted ...', Date(), Date.now());
         });
         this.on('error', function() {
-            console.log('something error ...');
+            console.log('%s(%d)\nsomething error ...', Date(), Date.now());
         });
         this.on('message', function(e) {
             var message = e.data;
-            console.log('received message: <-- %s ...', message);
+            console.log('%s(%d)\nreceived message: <-- %s ...', Date(), Date.now(), message);
         });
     }
 }
