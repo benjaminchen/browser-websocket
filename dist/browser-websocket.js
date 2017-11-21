@@ -111,16 +111,16 @@ BrowserWebSocket.prototype = {
         this.events[event].splice(index, 1);
     },
     emit: function(message) {
-        if (this.ws.readyState !== 1) console.log('connection is not established, please wait ...');
-        if (this.debugging) console.log('send message: --> %s ...', message);
+        if (this.ws.readyState !== 1) console.log('%s(%d)\nconnection is not established, please wait ...', Date(), Date.now());
+        if (this.debugging) console.log('%s(%d)\nsend message: --> %s ...', Date(), Date.now(), message);
         this.ws.send(message);
     },
     close: function() {
-        if (this.debugging) console.log('close connection ...');
+        if (this.debugging) console.log('%s(%d)\nclose connection ...', Date(), Date.now());
         this.ws.close();
     },
     reconnect: function() {
-        if (this.debugging) console.log('try to reconnect ...');
+        if (this.debugging) console.log('%s(%d)\ntry to reconnect ...', Date(), Date.now());
         var events = this.events;
         var ws = new WebSocket(this.url);
         var me = this;

@@ -1,5 +1,11 @@
 # Change Log
 
+## [v2.2.0](https://github.com/benjaminchen/browser-websocket/tree/v2.2.0) (2017-11-21)
+
+**Implemented enhancements:**
+
+- add time and timestamp in debug message of emit, close and reconnect methods
+
 ## [v2.1.0](https://github.com/benjaminchen/browser-websocket/tree/v2.1.0) (2017-11-21)
 
 **Implemented enhancements:**
